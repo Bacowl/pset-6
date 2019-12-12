@@ -46,12 +46,9 @@ canvas {
   width: 80%;
 }
 
-.output,
-.sample {
-  display: block;
+.output{
   width: 1024px;
-  height: 512px;
-  height: 5em;
+  height: 1024px;
   padding: 0%;
   border: 0.1em solid black;
   overflow: scroll;
@@ -60,14 +57,12 @@ canvas {
 
 .output div,
 .sample div {
-    width: 1024px;
+    width: 102px;
 }
-
-#sample-1, {
-  height: 1024px;
-}
-
 
 .exercise div {
   text-align: center;
+}
+.list{
+  height: 2048;
 }
