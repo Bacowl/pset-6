@@ -14,7 +14,6 @@ const addItem = function() {
       var id2 = "p" + i
       var element = document.getElementById(id2)
       var parent = document.getElementById("div2")
-      console.log(element)
       element.remove();
     }
   }
@@ -25,6 +24,8 @@ const addItem = function() {
     var para = document.createElement("p");
     var id = "p" + i
     para.setAttribute("id", id)
+    para.style.color = "white";
+    para.style.background = "grey";
     var node = document.createTextNode(list[i]);
     para.appendChild(node);
     var element = document.getElementById("div1");
