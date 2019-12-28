@@ -1,9 +1,3 @@
-window.onload = function() {
-    document.getElementById("add").onclick = addItem;
-    document.getElementById("delete").onclick = deleteItem;
-    document.getElementById("priority").onclick = setPriority;
-    document.getElementById("complete").onclick = markComplete;
-}
 const list = [];
 const priorityList = [];
 const checkList = [];
@@ -25,7 +19,9 @@ const addItem = function() {
       element4.remove();
     }
   }
-  var task = "- " + prompt("Task:")
+  var task = document.getElementById("userInput").value;
+  var task = "- " + task;
+  userInput.value = null;
   if (task != "- null" && task != "- ") {
       list[list.length] = task;
   }
@@ -34,13 +30,17 @@ const addItem = function() {
     var para = document.createElement("p");
     var id = "p" + i;
     para.setAttribute("id", id);
-    para.style.color = "white";
+    para.style.color = "DarkSlateGrey";
     para.style.background = "grey";
     para.style.border = "10px solid grey";
     para.style.borderRadius = "20px";
     para.style.font = "20px Times new Roman";
     para.style.fontWeight = "bold";
-    para.style.textDecoration = "line through"
+    for (var l = 0; l < checkList.length; l++) {
+      if (list[i] == checkList[l]) {
+        para.setAttribute("class", "checked")
+      }
+    }
     var node = document.createTextNode(list[i]);
     para.appendChild(node);
     var element = document.getElementById("div1");
@@ -74,6 +74,13 @@ const addItem = function() {
     check.style.background = "none";
     check.style.border = "none";
     check.style.color = "green";
+    for (var l = 0; l< checkList.length; l++) {
+      if (list[i] == checkList[l]) {
+        check.style.color = "GreenYellow"
+        para.style.border = "10px solid Lime"
+        para.style.background = "Lime"
+      }
+    }
     var element = document.getElementById("div1");
     element.appendChild(check);
     document.getElementById(id4).onclick = reply_click3;
@@ -92,6 +99,12 @@ const addItem = function() {
     priority.style.border = "none";
     priority.style.color = "orange"
     priority.style.fontWeight = "bold";
+    for (var l = 0; l< priorityList.length; l++) {
+      if (list[i] == priorityList[l]) {
+        priority.style.color = "red"
+        priority.style.border = "1px solid red"
+      }
+    }
     var element = document.getElementById("div1");
     element.appendChild(priority);
     document.getElementById(id7).onclick = reply_click2;
@@ -123,7 +136,7 @@ const reply_click1 = function() {
     var para = document.createElement("p");
     var id = "p" + i;
     para.setAttribute("id", id);
-    para.style.color = "white";
+    para.style.color = "DarkSlateGrey";
     para.style.background = "grey";
     para.style.border = "10px solid grey";
     para.style.borderRadius = "20px";
@@ -162,6 +175,18 @@ const reply_click1 = function() {
     check.style.background = "none";
     check.style.border = "none";
     check.style.color = "green";
+    for (var l = 0; l< checkList.length; l++) {
+      if (list[i] == checkList[l]) {
+        check.style.color = "GreenYellow"
+        para.style.border = "10px solid Lime"
+        para.style.background = "Lime"
+      }
+    }
+    for (var l = 0; l < checkList.length; l++) {
+      if (list[i] == checkList[l]) {
+        para.setAttribute("class", "checked")
+      }
+    }
     var element = document.getElementById("div1");
     element.appendChild(check);
     document.getElementById(id4).onclick = reply_click3;
@@ -180,6 +205,12 @@ const reply_click1 = function() {
     priority.style.border = "none";
     priority.style.color = "orange"
     priority.style.fontWeight = "bold";
+    for (var l = 0; l< priorityList.length; l++) {
+      if (list[i] == priorityList[l]) {
+        priority.style.color = "red"
+        priority.style.border = "1px solid red"
+      }
+    }
     var element = document.getElementById("div1");
     element.appendChild(priority);
     document.getElementById(id7).onclick = reply_click2;
@@ -210,7 +241,7 @@ const reply_click2 = function() {
     var para = document.createElement("p");
     var id = "p" + i;
     para.setAttribute("id", id);
-    para.style.color = "white";
+    para.style.color = "DarkSlateGrey";
     para.style.background = "grey";
     para.style.border = "10px solid grey";
     para.style.borderRadius = "20px";
@@ -264,6 +295,18 @@ const reply_click2 = function() {
     check.style.background = "none";
     check.style.border = "none";
     check.style.color = "green";
+    for (var l = 0; l< checkList.length; l++) {
+      if (list[i] == checkList[l]) {
+        check.style.color = "GreenYellow"
+        para.style.border = "10px solid Lime"
+        para.style.background = "Lime"
+      }
+    }
+    for (var l = 0; l < checkList.length; l++) {
+      if (list[i] == checkList[l]) {
+        para.setAttribute("class", "checked")
+      }
+    }
     var element = document.getElementById("div1");
     element.appendChild(check);
     document.getElementById(id4).onclick = reply_click3;
@@ -285,6 +328,7 @@ const reply_click2 = function() {
     for (var l = 0; l< priorityList.length; l++) {
       if (list[i] == priorityList[l]) {
         priority.style.color = "red"
+        priority.style.border = "1px solid red"
       }
     }
     var element = document.getElementById("div1");
@@ -317,7 +361,7 @@ const reply_click3 = function() {
     var para = document.createElement("p");
     var id = "p" + i;
     para.setAttribute("id", id);
-    para.style.color = "white";
+    para.style.color = "DarkSlateGrey";
     para.style.background = "grey";
     para.style.border = "10px solid grey";
     para.style.borderRadius = "20px";
@@ -332,11 +376,6 @@ const reply_click3 = function() {
       checkList.splice(j-1, 1)
     } else if (i < 1){
       checkList[checkList.length] = list[number]
-    }
-    for (var l = 0; l < checkList.length; l++) {
-      if (list[i] == checkList[l]) {
-        para.setAttribute("class", "checked")
-      }
     }
     var node = document.createTextNode(list[i]);
     para.appendChild(node);
@@ -375,6 +414,13 @@ const reply_click3 = function() {
     for (var l = 0; l< checkList.length; l++) {
       if (list[i] == checkList[l]) {
         check.style.color = "GreenYellow"
+        para.style.border = "10px solid Lime"
+        para.style.background = "Lime"
+      }
+    }
+    for (var l = 0; l < checkList.length; l++) {
+      if (list[i] == checkList[l]) {
+        para.setAttribute("class", "checked")
       }
     }
     var element = document.getElementById("div1");
@@ -395,6 +441,12 @@ const reply_click3 = function() {
     priority.style.border = "none";
     priority.style.color = "orange"
     priority.style.fontWeight = "bold";
+    for (var l = 0; l< priorityList.length; l++) {
+      if (list[i] == priorityList[l]) {
+        priority.style.color = "red"
+        priority.style.border = "1px solid red"
+      }
+    }
     var element = document.getElementById("div1");
     element.appendChild(priority);
     document.getElementById(id7).onclick = reply_click2;
