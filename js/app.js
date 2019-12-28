@@ -12,8 +12,13 @@ const addItem = function() {
     for (var i = 0; i < list.length; i++) {
       var id2 = "p" + i
       var element = document.getElementById(id2)
-      var parent = document.getElementById("div2")
       element.remove();
+      var id5 = "del" + i
+      var element2 = document.getElementById(id5)
+      element2.remove();
+      var id6 = "check" + i;
+      var element3 = document.getElementById(id6)
+      element3.remove();
     }
   }
   var task = prompt("Task:")
@@ -36,20 +41,37 @@ const addItem = function() {
     var element = document.getElementById("div1");
     element.appendChild(para);
 
-    var del = document.createElement("button")
-    del.setAttribute("class", "delete")
-    var id3 = "Del" + i;
-    del.setAttribute("id", id3)
-    var node2 = document.createTextNode("\u274C")
-    var height = i*63 +251 + "px"
+    var del = document.createElement("button");
+    del.setAttribute("class", "delete");
+    var id3 = "del" + i;
+    del.setAttribute("id", id3);
+    var node2 = document.createTextNode("\u274C");
+    var height = i*63 +251 + "px";
     del.appendChild(node2);
     del.style.position = "absolute";
     del.style.top = height;
-    del.style.left = "200px";
-    del.style.background = "none"
-    del.style.border = "none"
+    del.style.left = "1350px";
+    del.style.background = "none";
+    del.style.border = "none";
     element.insertAdjacentElement('afterBegin', del);
     document.getElementById(id3).onclick = reply_click;
+
+    var check = document.createElement("button");
+    check.setAttribute("class", "check");
+    var id4 = "check" + i;
+    check.setAttribute("id", id4);
+    var node3 = document.createTextNode("\u2714");
+    var height = i*63 +251 + "px";
+    check.appendChild(node3);
+    check.style.position = "absolute";
+    check.style.top = height;
+    check.style.left = "1300px";
+    check.style.background = "none";
+    check.style.border = "none";
+    check.style.color = "green"
+    var element = document.getElementById("div1");
+    element.appendChild(check);
+    document.getElementById(id4).onclick = reply_click;
     i++
   }
 }
