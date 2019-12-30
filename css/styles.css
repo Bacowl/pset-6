@@ -1,6 +1,7 @@
 body {
     margin: auto;
     width: 1224px;
+    background: black;
 }
 
 body:last-child {
@@ -10,15 +11,22 @@ body:last-child {
 h1 {
   font: bold 2.2em "Century Gothic", "Century Gothic", "Apple Gothic", sans-serif;
   text-align: center;
+  color: white;
 }
 
 h3 {
   margin-bottom: 0.25em;
   font: bold 1.1em "Century Gothic", "Century Gothic", "Apple Gothic", sans-serif;
   letter-spacing: 0.1em;
+  color: white;
 }
 
-button {
+p {
+  font: "Century Gothic"
+  color: white;
+}
+
+.add {
   display: inline-block;
   margin: auto;
   margin-left: 1%;
@@ -29,11 +37,7 @@ button {
 
 button:hover {
   box-shadow: 0.3em 0.3em 0.3em #777777;
-}
-
-canvas {
-  display: block;
-  margin: 0;
+  outline: 2px solid grey;
 }
 
 .exercise {
@@ -46,23 +50,11 @@ canvas {
   width: 80%;
 }
 
-.output{
-  width: 1024px;
-  height: 1024px;
-  padding: 0%;
-  border: 0.1em solid black;
-  overflow: scroll;
-  font: 1.1em "Century Gothic", "Century Gothic", "Apple Gothic", sans-serif;
-}
-
-.output div,
-.sample div {
-    width: 102px;
-}
-
 .exercise div {
   text-align: center;
 }
-.list{
-  height: 2048;
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: green;
 }
