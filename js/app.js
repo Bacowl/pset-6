@@ -55,10 +55,11 @@ const addItem = function() {
     del.appendChild(node2);
     del.style.position = "absolute";
     del.style.top = height;
-    del.style.left = "1350px";
+    del.style.left = "1250px";
     del.style.background = "none";
     del.style.border = "none";
-    element.insertAdjacentElement('afterBegin', del);
+    del.style.color = "red";
+    element.appendChild(del);
     document.getElementById(id3).onclick = reply_click1;
 
     var check = document.createElement("button");
@@ -94,7 +95,7 @@ const addItem = function() {
     priority.appendChild(node4);
     priority.style.position = "absolute";
     priority.style.top = height;
-    priority.style.left = "230px";
+    priority.style.left = "100px";
     priority.style.background = "none";
     priority.style.border = "none";
     priority.style.color = "orange"
@@ -156,10 +157,11 @@ const reply_click1 = function() {
     del.appendChild(node2);
     del.style.position = "absolute";
     del.style.top = height;
-    del.style.left = "1350px";
+    del.style.left = "1250px";
     del.style.background = "none";
     del.style.border = "none";
-    element.insertAdjacentElement('afterBegin', del);
+    del.style.color = "red";
+    element.appendChild(del);
     document.getElementById(id3).onclick = reply_click1;
 
     var check = document.createElement("button");
@@ -200,7 +202,7 @@ const reply_click1 = function() {
     priority.appendChild(node4);
     priority.style.position = "absolute";
     priority.style.top = height;
-    priority.style.left = "230px";
+    priority.style.left = "100px";
     priority.style.background = "none";
     priority.style.border = "none";
     priority.style.color = "orange"
@@ -276,10 +278,11 @@ const reply_click2 = function() {
     del.appendChild(node2);
     del.style.position = "absolute";
     del.style.top = height;
-    del.style.left = "1350px";
+    del.style.left = "1250px";
     del.style.background = "none";
     del.style.border = "none";
-    element.insertAdjacentElement('afterBegin', del);
+    del.style.color = "red";
+    element.appendChild(del);
     document.getElementById(id3).onclick = reply_click1;
 
     var check = document.createElement("button");
@@ -320,7 +323,7 @@ const reply_click2 = function() {
     priority.appendChild(node4);
     priority.style.position = "absolute";
     priority.style.top = height;
-    priority.style.left = "230px";
+    priority.style.left = "100px";
     priority.style.background = "none";
     priority.style.border = "none";
     priority.style.color = "orange"
@@ -392,10 +395,11 @@ const reply_click3 = function() {
     del.appendChild(node2);
     del.style.position = "absolute";
     del.style.top = height;
-    del.style.left = "1350px";
+    del.style.left = "1250px";
     del.style.background = "none";
     del.style.border = "none";
-    element.insertAdjacentElement('afterBegin', del);
+    del.style.color = "red";
+    element.appendChild(del);
     document.getElementById(id3).onclick = reply_click1;
 
     var check = document.createElement("button");
@@ -436,7 +440,7 @@ const reply_click3 = function() {
     priority.appendChild(node4);
     priority.style.position = "absolute";
     priority.style.top = height;
-    priority.style.left = "230px";
+    priority.style.left = "100px";
     priority.style.background = "none";
     priority.style.border = "none";
     priority.style.color = "orange"
