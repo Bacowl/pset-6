@@ -71,7 +71,7 @@ const addItem = function() {
     check.appendChild(node3);
     check.style.position = "absolute";
     check.style.top = height;
-    check.style.left = "1300px";
+    check.style.left = "1200px";
     check.style.background = "none";
     check.style.border = "none";
     check.style.color = "green";
@@ -95,7 +95,7 @@ const addItem = function() {
     priority.appendChild(node4);
     priority.style.position = "absolute";
     priority.style.top = height;
-    priority.style.left = "100px";
+    priority.style.left = "125px";
     priority.style.background = "none";
     priority.style.border = "none";
     priority.style.color = "orange"
@@ -173,7 +173,7 @@ const reply_click1 = function() {
     check.appendChild(node3);
     check.style.position = "absolute";
     check.style.top = height;
-    check.style.left = "1300px";
+    check.style.left = "1200px";
     check.style.background = "none";
     check.style.border = "none";
     check.style.color = "green";
@@ -202,7 +202,7 @@ const reply_click1 = function() {
     priority.appendChild(node4);
     priority.style.position = "absolute";
     priority.style.top = height;
-    priority.style.left = "100px";
+    priority.style.left = "125px";
     priority.style.background = "none";
     priority.style.border = "none";
     priority.style.color = "orange"
@@ -294,7 +294,7 @@ const reply_click2 = function() {
     check.appendChild(node3);
     check.style.position = "absolute";
     check.style.top = height;
-    check.style.left = "1300px";
+    check.style.left = "1200px";
     check.style.background = "none";
     check.style.border = "none";
     check.style.color = "green";
@@ -323,7 +323,7 @@ const reply_click2 = function() {
     priority.appendChild(node4);
     priority.style.position = "absolute";
     priority.style.top = height;
-    priority.style.left = "100px";
+    priority.style.left = "125px";
     priority.style.background = "none";
     priority.style.border = "none";
     priority.style.color = "orange"
@@ -411,7 +411,7 @@ const reply_click3 = function() {
     check.appendChild(node3);
     check.style.position = "absolute";
     check.style.top = height;
-    check.style.left = "1300px";
+    check.style.left = "1200px";
     check.style.background = "none";
     check.style.border = "none";
     check.style.color = "green";
@@ -440,7 +440,7 @@ const reply_click3 = function() {
     priority.appendChild(node4);
     priority.style.position = "absolute";
     priority.style.top = height;
-    priority.style.left = "100px";
+    priority.style.left = "125px";
     priority.style.background = "none";
     priority.style.border = "none";
     priority.style.color = "orange"
