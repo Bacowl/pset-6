@@ -38,7 +38,7 @@ const addItem = function() {
     para.style.fontWeight = "bold";
     for (var l = 0; l < checkList.length; l++) {
       if (list[i] == checkList[l]) {
-        para.setAttribute("class", "checked")
+        para.setAttribute("class", "checked");
       }
     }
     var node = document.createTextNode(list[i]);
